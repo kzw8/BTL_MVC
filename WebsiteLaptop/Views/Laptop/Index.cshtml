@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebsiteLaptop.Models.Laptop>
+@using System.Linq
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Danh sách Laptop";
+}
+<h1>@ViewBag.Title</h1>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Thêm Laptop</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.First().TenLaptop)</th>
+            <th>@Html.DisplayNameFor(m => m.First().HangSanXuat)</th>
+            <th>@Html.DisplayNameFor(m => m.First().Gia)</th>
+            <!-- …các cột khác… -->
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TenLaptop</td>
+                <td>@item.HangSanXuat</td>
+                <td>@item.Gia.ToString("N0") đ</td>
+                <!-- …các trường khác… -->
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaLaptop">Sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaLaptop">Chi tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaLaptop">Xoá</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
