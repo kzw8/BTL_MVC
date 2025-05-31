@@ -1,0 +1,24 @@
+﻿@using WebsiteLaptop.Models
+@model DanhMuc
+
+@{
+    ViewBag.Title = "Thêm danh mục";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">➕ Thêm danh mục mới</h2>
+
+    <form asp-action="TaoMoi" method="post">
+        @Html.Partial("_FormDanhMuc")
+        <div class="d-flex justify-content-between">
+            <a asp-action="DanhSach" class="btn btn-secondary">⬅️ Quay lại</a>
+            <button type="submit" class="btn btn-success">💾 Thêm danh mục</button>
+        </div>
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

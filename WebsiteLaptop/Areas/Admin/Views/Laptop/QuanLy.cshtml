@@ -1,0 +1,66 @@
+﻿@using WebsiteLaptop.Models
+@model List<Laptop>
+
+@{
+    ViewBag.Title = "Quản lý sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">📋 Danh sách Laptop</h2>
+
+    <a asp-action="Them" class="btn btn-success mb-3">➕ Thêm Laptop mới</a>
+
+    <table class="table table-bordered table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Số lượng sản phẩm</th>
+                <th>Ảnh</th>
+                <th>Tên Laptop</th>
+                <th>Hãng sản xuất</th>
+                <th>Giá</th>
+                <th>Danh mục</th>
+                <th>Ngày tạo</th>
+                <th class="text-center">Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                int i = 1;
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>
+                            @{
+                                var anhDaiDien = item.HinhAnhLaptops.FirstOrDefault();
+                            }
+                            @if (anhDaiDien != null)
+                            {
+                                <img src="@anhDaiDien.DuongDan" style="height:60px;" class="rounded" />
+                            }
+                        </td>
+
+                        <td>@item.TenLaptop</td>
+                        <td>@item.HangSanXuat</td>
+                        <td>@String.Format("{0:N0} ₫", item.Gia)</td>
+                        <td>@item.DanhMuc?.TenDanhMuc</td>
+                        <td>@item.NgayTao.ToString("dd/MM/yyyy")</td>
+                        <td class="text-center">
+                            <a asp-action="Detail" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-info">🔍</a>
+                            <a asp-action="Edit" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-warning">✏️</a>
+                            <a asp-action="Delete" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-danger" onclick="return confirm('Xoá sản phẩm này?');">❌</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="8" class="text-center text-muted">Không có sản phẩm nào.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

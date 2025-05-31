@@ -1,0 +1,54 @@
+﻿@using WebsiteLaptop.Models
+@model DonHang
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hóa đơn - Đơn hàng #@Model.MaDonHang</title>
+    <style>
+        body { font-family: Arial; padding: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        .text-right { text-align: right; }
+        h2 { margin-top: 0; }
+    </style>
+</head>
+<body onload="window.print()">
+    <h2>🧾 Hóa đơn #@Model.MaDonHang</h2>
+    <p><strong>Khách hàng:</strong> @Model.NguoiDung?.HoVaTen</p>
+    <p><strong>Ngày đặt:</strong> @Model.NgayDatHang.ToString("dd/MM/yyyy HH:mm")</p>
+    <p><strong>Trạng thái:</strong> @Model.TrangThai</p>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tên laptop</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+                foreach (var item in Model.DonHangChiTiets)
+                {
+                    <tr>
+                        <td>@i++</td>
+                        <td>@item.Laptop?.TenLaptop</td>
+                        <td>@String.Format("{0:N0} ₫", item.DonGia)</td>
+                        <td>@item.SoLuong</td>
+                        <td>@String.Format("{0:N0} ₫", item.DonGia * item.SoLuong)</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <h4 class="text-right">Tổng cộng: @String.Format("{0:N0} ₫", Model.TongTien)</h4>
+</body>
+</html>

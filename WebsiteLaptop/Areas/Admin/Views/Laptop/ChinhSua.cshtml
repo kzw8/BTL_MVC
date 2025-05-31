@@ -1,0 +1,78 @@
+﻿@using WebsiteLaptop.Models
+@model Laptop
+
+@{
+    ViewBag.Title = "Cập nhật Laptop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Cập nhật Laptop</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="MaLaptop" />
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="TenLaptop" class="form-label">Tên Laptop</label>
+                <input asp-for="TenLaptop" class="form-control" />
+                <span asp-validation-for="TenLaptop" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="HangSanXuat" class="form-label">Hãng sản xuất</label>
+                <input asp-for="HangSanXuat" class="form-control" />
+                <span asp-validation-for="HangSanXuat" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label asp-for="Gia" class="form-label">Giá</label>
+                <input asp-for="Gia" class="form-control" />
+                <span asp-validation-for="Gia" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="MaDanhMuc" class="form-label">Danh mục</label>
+                <select asp-for="MaDanhMuc" asp-items="ViewBag.DanhMucList" class="form-select"></select>
+                <span asp-validation-for="MaDanhMuc" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MoTa" class="form-label">Mô tả</label>
+            <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="MoTa" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ảnh hiện tại</label>
+            <div class="d-flex flex-wrap gap-3">
+                @foreach (var h in Model.HinhAnhLaptops)
+                {
+                    <div class="text-center">
+                        <img src="@h.DuongDan" style="height: 80px;" class="img-thumbnail" />
+                        <div class="form-check mt-1">
+                            <input type="checkbox" name="XoaAnhIds" value="@h.MaAnh" class="form-check-input" />
+                            <label class="form-check-label text-danger">Xóa</label>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tải ảnh mới (nếu có)</label>
+            <input type="file" name="HinhAnhFiles" class="form-control" multiple />
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-action="QuanLy" class="btn btn-secondary">Quay lại</a>
+            <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

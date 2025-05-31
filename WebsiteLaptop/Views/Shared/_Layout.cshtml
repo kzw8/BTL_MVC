@@ -7,20 +7,28 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - LaptopKZW</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Laptops" asp-action="Index">LaptopKZW</a>
-                <button class="navbar-toggler" …></button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand" asp-area="User" asp-controller="Laptop" asp-action="DanhSach">LaptopKZW</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <!-- Dropdown danh mục -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dmDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="dmDropdown" role="button" data-bs-toggle="dropdown">
                                 Danh mục
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dmDropdown">
@@ -28,8 +36,9 @@
                                 {
                                     <li>
                                         <a class="dropdown-item"
-                                           asp-controller="Laptops"
-                                           asp-action="Index"
+                                           asp-area="User"
+                                           asp-controller="Laptop"
+                                           asp-action="DanhSach"
                                            asp-route-categoryId="@dm.MaDanhMuc">
                                             @dm.TenDanhMuc
                                         </a>
@@ -38,22 +47,22 @@
                             </ul>
                         </li>
 
+                        <!-- Form tìm kiếm -->
                         <li class="nav-item">
-                            <form class="d-flex" role="search"
-                                  asp-controller="Laptops" asp-action="Index" method="get">
-                                <input class="form-control me-2" type="search"
-                                       placeholder="Tìm kiếm laptop" name="q"
-                                       value="@(HttpContextAccessor.HttpContext?.Request?.Query["q"])"
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            <form class="d-flex" role="search" asp-area="User" asp-controller="Laptop" asp-action="DanhSach" method="get">
+                                <input class="form-control me-2" type="search" name="q"
+                                       placeholder="Tìm kiếm laptop"
+                                       value="@(HttpContextAccessor.HttpContext?.Request?.Query["q"])" />
+                                <button class="btn btn-outline-success" type="submit">Tìm</button>
                             </form>
                         </li>
 
+                        <!-- Tra cứu đơn hàng -->
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="DonHangs" asp-action="Index">
-                                Tra cứu đơn hàng
-                            </a>
+                            <a class="nav-link" asp-controller="DonHang" asp-action="DanhSach">Tra cứu đơn hàng</a>
                         </li>
 
+                        <!-- Giỏ hàng -->
                         <li class="nav-item position-relative">
                             <a class="nav-link" asp-controller="GioHang" asp-action="Index">
                                 <i class="bi bi-cart-check fs-4"></i>
@@ -68,35 +77,39 @@
                         </li>
                     </ul>
 
+                    <!-- Đăng nhập / Đăng ký -->
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Account" asp-action="Logout">Đăng xuất</a>
+                                <span class="text-light me-2">👋 Xin chào, @User.Identity.Name!</span>
+                                <a class="nav-link" asp-area="User" asp-controller="TaiKhoan" asp-action="DangXuat">Đăng xuất</a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Account" asp-action="DangNhap">Đăng nhập</a>
+                                <a class="nav-link" asp-area="User" asp-controller="TaiKhoan" asp-action="DangNhap">Đăng nhập</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="Account" asp-action="Register">Đăng ký</a>
+                                <a class="nav-link" asp-area="User" asp-controller="TaiKhoan" asp-action="DangKy">Đăng ký</a>
                             </li>
                         }
                     </ul>
-
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-4">
+    <main class="container mt-4">
         @RenderBody()
-    </div>
+    </main>
 
-    <footer>…</footer>
-    <script src="…bootstrap.bundle.min.js"></script>
+    <footer class="text-center text-muted py-4 border-top">
+        © @DateTime.Now.Year - LaptopKZW. All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

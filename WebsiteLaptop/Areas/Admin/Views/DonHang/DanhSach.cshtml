@@ -1,0 +1,99 @@
+﻿@using WebsiteLaptop.Models
+@model List<DonHang>
+
+@{
+    ViewBag.Title = "Danh sách đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string GetBadgeClass(string trangThai) => trangThai switch
+    {
+        "Chờ xử lý" => "bg-warning text-dark",
+        "Đang giao" => "bg-primary",
+        "Hoàn tất" => "bg-success",
+        "Đã hủy" => "bg-danger",
+        _ => "bg-secondary"
+    };
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">📦 Danh sách đơn hàng</h2>
+
+    <!-- Bộ lọc -->
+    <form method="get" class="row mb-4">
+        <div class="col-md-3">
+            <label>Từ ngày</label>
+            <input type="date" name="tuNgay" value="@ViewBag.TuNgay" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>Đến ngày</label>
+            <input type="date" name="denNgay" value="@ViewBag.DenNgay" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>Trạng thái</label>
+            <select name="trangThai" class="form-select">
+                <option value="">-- Tất cả --</option>
+                <option value="Chờ xử lý" selected="@(ViewBag.TrangThai == "Chờ xử lý")">Chờ xử lý</option>
+                <option value="Đang giao" selected="@(ViewBag.TrangThai == "Đang giao")">Đang giao</option>
+                <option value="Hoàn tất" selected="@(ViewBag.TrangThai == "Hoàn tất")">Hoàn tất</option>
+                <option value="Đã hủy" selected="@(ViewBag.TrangThai == "Đã hủy")">Đã hủy</option>
+            </select>
+
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary">🔍 Lọc</button>
+        </div>
+    </form>
+
+    <!-- Danh sách đơn hàng -->
+    <table class="table table-bordered table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Khách hàng</th>
+                <th>Ngày đặt</th>
+                <th>Trạng thái</th>
+                <th>Tổng tiền</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Any())
+            {
+                for (int i = 0; i < Model.Count; i++)
+                {
+                    var dh = Model[i];
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@dh.NguoiDung?.HoVaTen</td>
+                        <td>@dh.NgayDatHang.ToString("dd/MM/yyyy")</td>
+
+                        <!-- Trạng thái có màu và dropdown -->
+                        <td>
+                            <form asp-action="CapNhatTrangThai" method="post" class="d-flex">
+                                <input type="hidden" name="id" value="@dh.MaDonHang" />
+                                <select name="trangThai" class="form-select form-select-sm @GetBadgeClass(dh.TrangThai)" onchange="this.form.submit()">
+                                    <option value="Chờ xử lý" selected="@(dh.TrangThai == "Chờ xử lý")">Chờ xử lý</option>
+                                    <option value="Đang giao" selected="@(dh.TrangThai == "Đang giao")">Đang giao</option>
+                                    <option value="Hoàn tất" selected="@(dh.TrangThai == "Hoàn tất")">Hoàn tất</option>
+                                    <option value="Đã hủy" selected="@(dh.TrangThai == "Đã hủy")">Đã hủy</option>
+                                </select>
+                            </form>
+                        </td>
+
+                        <td>@String.Format("{0:N0} ₫", dh.TongTien)</td>
+                        <td class="d-flex gap-2">
+                            <a asp-action="ChiTiet" asp-route-id="@dh.MaDonHang" class="btn btn-info btn-sm">🔍 Xem</a>
+                            <a asp-action="InHoaDon" asp-route-id="@dh.MaDonHang" class="btn btn-outline-dark btn-sm" target="_blank">🖨️ In</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center text-muted">Không có đơn hàng nào phù hợp.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

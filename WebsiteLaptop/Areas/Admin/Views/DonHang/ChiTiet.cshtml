@@ -1,0 +1,63 @@
+﻿@using WebsiteLaptop.Models
+@model DonHang
+
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">📋 Chi tiết đơn hàng #@Model.MaDonHang</h2>
+
+    <div class="mb-4">
+        <p><strong>Khách hàng:</strong> @Model.NguoiDung?.HoVaTen</p>
+        <p><strong>Email:</strong> @Model.NguoiDung?.Email</p>
+        <p><strong>Điện thoại:</strong> @Model.DienThoaiGiaoHang</p>
+        <p><strong>Địa chỉ:</strong> @Model.DiaChiGiaoHang</p>
+        <p><strong>Ngày đặt:</strong> @Model.NgayDatHang.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Trạng thái:</strong> @Model.TrangThai</p>
+    </div>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Laptop</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.DonHangChiTiets != null && Model.DonHangChiTiets.Any())
+            {
+                int i = 1;
+                foreach (var item in Model.DonHangChiTiets)
+                {
+                    <tr>
+                        <td>@i++</td>
+                        <td>@item.Laptop?.TenLaptop</td>
+                        <td>@String.Format("{0:N0} ₫", item.DonGia)</td>
+                        <td>@item.SoLuong</td>
+                        <td>@String.Format("{0:N0} ₫", item.DonGia * item.SoLuong)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center text-muted">Không có sản phẩm nào trong đơn hàng.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-end">
+        <h5 class="text-danger fw-bold">Tổng tiền: @String.Format("{0:N0} ₫", Model.TongTien)</h5>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="DanhSach" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
+        <a asp-action="InHoaDon" asp-route-id="@Model.MaDonHang" class="btn btn-outline-primary" target="_blank">🖨️ In hóa đơn</a>
+    </div>
+</div>

@@ -15,7 +15,9 @@ namespace WebsiteLaptop.Data
         public DbSet<NguoiDung> NguoiDung { get; set; }
         public DbSet<DonHang> DonHang { get; set; }
         public DbSet<DonHangChiTiet> DonHangChiTiet { get; set; }
+        public DbSet<HinhAnhLaptop> HinhAnhLaptop { get; set; }
+        public DbSet<ThongSoKyThuat> ThongSoKyThuat { get; set; }
 
-        
+
     }
 }

@@ -1,0 +1,137 @@
+﻿@using WebsiteLaptop.Models
+@model Laptop
+
+@{
+    ViewBag.Title = Model.TenLaptop;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- lightGallery CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Cột ảnh -->
+        <div class="col-md-5">
+            @if (Model.HinhAnhLaptops != null && Model.HinhAnhLaptops.Any())
+            {
+                <!-- Ảnh chính -->
+                <a href="@Model.HinhAnhLaptops.First().DuongDan" id="main-preview" data-lg-size="1400-900">
+                    <img src="@Model.HinhAnhLaptops.First().DuongDan" class="img-fluid rounded" />
+                </a>
+
+                <!-- Danh sách ảnh nhỏ -->
+                <div id="lightgallery" class="mt-3 d-flex flex-wrap gap-2">
+                    @foreach (var hinh in Model.HinhAnhLaptops)
+                    {
+                        <a href="@hinh.DuongDan" data-lg-size="1400-900">
+                            <img src="@hinh.DuongDan" width="60" class="rounded border" />
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+
+        <!-- Cột thông tin -->
+        <div class="col-md-7">
+            <h3>@Model.TenLaptop</h3>
+            <p><strong>Giá:</strong> @String.Format("{0:N0} ₫", Model.Gia)</p>
+            <p><strong>Hãng:</strong> @Model.HangSanXuat</p>
+            <p><strong>Danh mục:</strong> @Model.DanhMuc?.TenDanhMuc</p>
+            <p><strong>Mô tả:</strong> @Model.MoTa</p>
+
+            @if (Model.ThongSoKyThuat != null)
+            {
+                <h5 class="mt-4">Thông số kỹ thuật</h5>
+                <form asp-area="Admin" asp-controller="Laptop" asp-action="SuaThongSo" method="post" id="form-thongso">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="MaLaptop" value="@Model.MaLaptop" />
+                    <input type="hidden" name="MaThongSo" value="@Model.ThongSoKyThuat.MaThongSo" />
+
+                    <table class="table table-bordered mt-2">
+                        <tr><th>CPU</th><td><input name="CPU" class="form-control" value="@Model.ThongSoKyThuat.CPU" readonly /></td></tr>
+                        <tr><th>RAM</th><td><input name="RAM" class="form-control" value="@Model.ThongSoKyThuat.RAM" readonly /></td></tr>
+                        <tr><th>Ổ cứng</th><td><input name="OCung" class="form-control" value="@Model.ThongSoKyThuat.OCung" readonly /></td></tr>
+                        <tr><th>Card đồ họa</th><td><input name="CardDoHoa" class="form-control" value="@Model.ThongSoKyThuat.CardDoHoa" readonly /></td></tr>
+                        <tr><th>Màn hình</th><td><input name="ManHinh" class="form-control" value="@Model.ThongSoKyThuat.ManHinh" readonly /></td></tr>
+                        <tr><th>Cổng giao tiếp</th><td><input name="CongGiaoTiep" class="form-control" value="@Model.ThongSoKyThuat.CongGiaoTiep" readonly /></td></tr>
+                        <tr><th>Audio</th><td><input name="Audio" class="form-control" value="@Model.ThongSoKyThuat.Audio" readonly /></td></tr>
+                        <tr><th>LAN</th><td><input name="LAN" class="form-control" value="@Model.ThongSoKyThuat.LAN" readonly /></td></tr>
+                        <tr><th>Wi-Fi</th><td><input name="WIFI" class="form-control" value="@Model.ThongSoKyThuat.WIFI" readonly /></td></tr>
+                        <tr><th>Bluetooth</th><td><input name="Bluetooth" class="form-control" value="@Model.ThongSoKyThuat.Bluetooth" readonly /></td></tr>
+                        <tr><th>Webcam</th><td><input name="Webcam" class="form-control" value="@Model.ThongSoKyThuat.Webcam" readonly /></td></tr>
+                        <tr><th>Hệ điều hành</th><td><input name="HeDieuHanh" class="form-control" value="@Model.ThongSoKyThuat.HeDieuHanh" readonly /></td></tr>
+                        <tr><th>Pin</th><td><input name="Pin" class="form-control" value="@Model.ThongSoKyThuat.Pin" readonly /></td></tr>
+                        <tr><th>Trọng lượng</th><td><input name="TrongLuong" class="form-control" value="@Model.ThongSoKyThuat.TrongLuong" readonly /></td></tr>
+                    </table>
+
+                    <div class="d-flex gap-2">
+                        <a asp-action="QuanLy" class="btn btn-secondary">Quay lại</a>
+                        <button type="button" class="btn btn-warning" id="btn-edit">Sửa</button>
+                        <button type="submit" class="btn btn-primary" id="btn-save" disabled>Cập nhật</button>
+                    </div>
+                    
+                </form>
+            }
+            else
+            {
+                <h5 class="mt-4">Nhập thông số kỹ thuật</h5>
+                <form asp-area="Admin" asp-controller="Laptop" asp-action="ThemThongSo" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="MaLaptop" value="@Model.MaLaptop" />
+
+                    <div class="row">
+                        <div class="col-md-6 mb-2"><label>CPU</label><input name="CPU" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>RAM</label><input name="RAM" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Ổ cứng</label><input name="OCung" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Card đồ họa</label><input name="CardDoHoa" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Màn hình</label><input name="ManHinh" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Cổng giao tiếp</label><input name="CongGiaoTiep" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Audio</label><input name="Audio" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>LAN</label><input name="LAN" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Wi-Fi</label><input name="WIFI" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Bluetooth</label><input name="Bluetooth" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Webcam</label><input name="Webcam" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Hệ điều hành</label><input name="HeDieuHanh" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Pin</label><input name="Pin" class="form-control" /></div>
+                        <div class="col-md-6 mb-2"><label>Trọng lượng</label><input name="TrongLuong" class="form-control" /></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-3">💾 Lưu thông số</button>
+                </form>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+            document.getElementById("btn-edit")?.addEventListener("click", function () {
+            document.querySelectorAll("#form-thongso input.form-control").forEach(i => {
+                i.removeAttribute("readonly");
+                i.setAttribute("required", "true");
+            });
+            document.getElementById("btn-save")?.removeAttribute("disabled");
+            this.setAttribute("disabled", "true");
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+
+    <script>
+        lightGallery(document.getElementById("lightgallery"), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 400,
+            thumbnail: true,
+            zoom: true
+        });
+
+        document.getElementById("main-preview")?.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#lightgallery a")?.click();
+        });
+    </script>
+}

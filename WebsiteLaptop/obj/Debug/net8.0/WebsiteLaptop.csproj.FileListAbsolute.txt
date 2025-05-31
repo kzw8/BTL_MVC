@@ -11,7 +11,9 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\WebsiteLaptop.
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\WebsiteLaptop.pdb
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Azure.Core.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Azure.Identity.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Humanizer.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\MailKit.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.Build.dll
@@ -64,6 +66,7 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.Visu
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\MimeKit.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\NuGet.Common.dll
@@ -90,6 +93,7 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.IO.Pipe
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\System.Text.Json.dll
@@ -252,6 +256,7 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\runtimes\win-a
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.csproj.AssemblyReference.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.GeneratedMSBuildEditorConfig.editorconfig
@@ -261,7 +266,7 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.MvcApplicationPartsAssemblyInfo.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.RazorAssemblyInfo.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.RazorAssemblyInfo.cs
-C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.sourcelink.json
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\bundle\WebsiteLaptop.styles.css
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\projectbundle\WebsiteLaptop.bundle.scp.css
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\staticwebassets.build.json
@@ -275,3 +280,4 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\refint\Website
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.pdb
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.genruntimeconfig.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\ref\WebsiteLaptop.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

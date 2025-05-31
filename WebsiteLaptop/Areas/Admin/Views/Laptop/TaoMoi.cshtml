@@ -1,0 +1,61 @@
+﻿@using WebsiteLaptop.Models
+@model Laptop
+
+@{
+    ViewBag.Title = "Thêm Laptop mới";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Thêm Laptop mới</h2>
+
+    <form asp-action="Them" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="TenLaptop" class="form-label">Tên Laptop</label>
+            <input asp-for="TenLaptop" class="form-control" />
+            <span asp-validation-for="TenLaptop" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="HangSanXuat" class="form-label">Hãng sản xuất</label>
+            <select asp-for="HangSanXuat" asp-items="ViewBag.HangSanXuatList" class="form-select">
+                <option value="">-- Chọn hãng sản xuất --</option>
+            </select>
+
+            <span asp-validation-for="HangSanXuat" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Gia" class="form-label">Giá</label>
+            <input asp-for="Gia" type="number" class="form-control" />
+            <span asp-validation-for="Gia" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MoTa" class="form-label">Mô tả</label>
+            <textarea asp-for="MoTa" class="form-control"></textarea>
+            <span asp-validation-for="MoTa" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Ảnh Laptop (nhiều ảnh)</label>
+            <input type="file" name="HinhAnhFiles" class="form-control" multiple />
+        </div>
+
+
+        <div class="mb-3">
+            <label asp-for="MaDanhMuc" class="form-label">Danh mục</label>
+            <select asp-for="MaDanhMuc" asp-items="ViewBag.DanhMucList" class="form-select">
+                <option value="">-- Chọn danh mục --</option>
+            </select>
+            <span asp-validation-for="MaDanhMuc" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Lưu</button>
+        <a asp-action="QuanLy" class="btn btn-secondary">Quay lại</a>
+    </form>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

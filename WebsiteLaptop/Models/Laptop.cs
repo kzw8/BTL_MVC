@@ -14,10 +14,10 @@ namespace WebsiteLaptop.Models
         public int MaDanhMuc { get; set; }
 
         [Required, StringLength(100)]
-        public string TenLaptop { get; set; }
+        public string TenLaptop { get; set; } = string.Empty;
 
         [Required, StringLength(50)]
-        public string HangSanXuat { get; set; }
+        public string HangSanXuat { get; set; } = string.Empty ;
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal Gia { get; set; }
@@ -28,8 +28,14 @@ namespace WebsiteLaptop.Models
         public string? DuongDanAnh { get; set; }
 
         public DateTime NgayTao { get; set; }
+        public bool DaXoa { get; set; } = false;
+        public DateTime? NgayXoa { get; set; }
 
-        public virtual DanhMuc DanhMuc { get; set; }
+        public virtual DanhMuc? DanhMuc { get; set; }
+        public virtual ThongSoKyThuat? ThongSoKyThuat { get; set; }
+
+
+        public virtual ICollection<HinhAnhLaptop> HinhAnhLaptops { get; set; } = new List<HinhAnhLaptop>();
         public virtual ICollection<ChiTietGioHang> ChiTietGioHangs { get; set; }
             = new List<ChiTietGioHang>();
         public virtual ICollection<DonHangChiTiet> DonHangChiTiets { get; set; }

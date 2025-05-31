@@ -1,0 +1,70 @@
+﻿@using WebsiteLaptop.Models
+@model List<DanhMuc>
+
+@{
+    ViewBag.Title = "Danh mục đã ẩn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">🗃️ Danh mục đã ẩn (xóa mềm)</h2>
+
+    <a asp-action="DanhSach" class="btn btn-secondary mb-3">⬅️ Về danh sách danh mục</a>
+
+    <form asp-action="KhoiPhucNhieu" method="post">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th style="width:40px;">
+                        <input type="checkbox" id="check-all" />
+                    </th>
+                    <th>#</th>
+                    <th>Tên danh mục</th>
+                    <th>Mô tả</th>
+                    <th>Ngày xóa</th>
+                    <th style="width:120px;">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    int i = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ids" value="@item.MaDanhMuc" class="item-check" />
+                            </td>
+                            <td>@i++</td>
+                            <td>@item.TenDanhMuc</td>
+                            <td>@item.MoTa</td>
+                            <td>@item.NgayXoa?.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>
+                                <a asp-action="KhoiPhucDanhMuc" asp-route-id="@item.MaDanhMuc" class="btn btn-sm btn-success">♻️</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center text-muted">Không có danh mục nào đã ẩn.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <button type="submit" class="btn btn-success" onclick="return confirm('Khôi phục các danh mục đã chọn?')">
+            ♻️ Khôi phục đã chọn
+        </button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("check-all")?.addEventListener("change", function () {
+            const isChecked = this.checked;
+            document.querySelectorAll(".item-check").forEach(cb => cb.checked = isChecked);
+        });
+    </script>
+}

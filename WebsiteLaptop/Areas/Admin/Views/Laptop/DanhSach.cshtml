@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Bảng điều khiển Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Quản trị viên: @User.Identity.Name</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Quản lý sản phẩm</h5>
+                    <a asp-area="Admin" asp-controller="Laptop" asp-action="QuanLy" class="btn btn-primary mt-2">Xem sản phẩm</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Quản lý danh mục</h5>
+                    <a asp-controller="DanhMuc" asp-action="Index" class="btn btn-secondary mt-2">Xem danh mục</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Quản lý đơn hàng</h5>
+                    <a asp-controller="DonHang" asp-action="Index" class="btn btn-success mt-2">Xem đơn hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

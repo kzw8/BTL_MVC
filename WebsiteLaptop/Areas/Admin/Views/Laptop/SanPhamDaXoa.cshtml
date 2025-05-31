@@ -1,0 +1,84 @@
+﻿@using WebsiteLaptop.Models
+@model List<Laptop>
+
+@{
+    ViewBag.Title = "Sản phẩm đã ẩn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">🗃️ Sản phẩm đã ẩn (Xóa mềm)</h2>
+
+    <form method="get" class="row mb-3">
+        <div class="col-md-3">
+            <label>Từ ngày</label>
+            <input type="date" name="tuNgay" value="@ViewBag.TuNgay" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>Đến ngày</label>
+            <input type="date" name="denNgay" value="@ViewBag.DenNgay" class="form-control" />
+        </div>
+        <div class="col-md-3 align-self-end">
+            <button type="submit" class="btn btn-primary">🔍 Lọc</button>
+        </div>
+    </form>
+
+    <form method="post" asp-action="KhoiPhucNhieu">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th><input type="checkbox" id="check-all" /></th>
+                    <th>Ảnh</th>
+                    <th>Tên</th>
+                    <th>Hãng</th>
+                    <th>Giá</th>
+                    <th>Danh mục</th>
+                    <th>Ngày xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="ids" value="@item.MaLaptop" class="item-check" />
+                            </td>
+                            <td>
+                                @{
+                                    var anh = item.HinhAnhLaptops.FirstOrDefault();
+                                }
+                                @if (anh != null)
+                                {
+                                    <img src="@anh.DuongDan" style="height:60px;" class="rounded" />
+                                }
+                            </td>
+                            <td>@item.TenLaptop</td>
+                            <td>@item.HangSanXuat</td>
+                            <td>@String.Format("{0:N0} ₫", item.Gia)</td>
+                            <td>@item.DanhMuc?.TenDanhMuc</td>
+                            <td>@item.NgayXoa?.ToString("dd/MM/yyyy HH:mm")</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="7" class="text-center text-muted">Không có sản phẩm nào.</td></tr>
+                }
+            </tbody>
+        </table>
+
+        <button type="submit" class="btn btn-success" onclick="return confirm('Khôi phục các sản phẩm đã chọn?');">♻️ Khôi phục đã chọn</button>
+        <a asp-action="QuanLy" class="btn btn-secondary ms-2">⬅️ Về quản lý</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("check-all")?.addEventListener("change", function () {
+            const checked = this.checked;
+            document.querySelectorAll(".item-check").forEach(cb => cb.checked = checked);
+        });
+    </script>
+}

@@ -1,0 +1,103 @@
+﻿@using WebsiteLaptop.Models
+@model DangKy
+
+@{
+    ViewBag.Title = "Đăng ký tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-4">@ViewBag.Title</h2>
+
+            <form asp-action="Register" method="post" id="form-register">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+                <div class="mb-3">
+                    <label asp-for="TenDangNhap" class="form-label"></label>
+                    <input asp-for="TenDangNhap" class="form-control" minlength="4" maxlength="12" required />
+                    <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+                    <small class="text-muted">Tên đăng nhập từ 4–12 ký tự, không chứa dấu cách.</small>
+                </div>
+
+                <input asp-for="Email" class="form-control"
+                       data-val="true"
+                       data-val-remote="Email đã được sử dụng."
+                       data-val-remote-url="@Url.Action("KiemTraEmailTrung", "Account")"
+                       data-val-remote-type="POST" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+
+                <div class="mb-3">
+                    <label asp-for="MatKhau" class="form-label"></label>
+                    <input asp-for="MatKhau" type="password" class="form-control" id="matkhau" required />
+                    <span asp-validation-for="MatKhau" class="text-danger"></span>
+                    <div class="form-text" id="pwd-strength"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" id="xacnhan" required />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    <div class="form-text text-danger" id="match-status"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="HoVaTen" class="form-label"></label>
+                    <input asp-for="HoVaTen" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DienThoai" class="form-label"></label>
+                    <input asp-for="DienThoai" class="form-control" pattern="0\d{9}" maxlength="10" title="Số điện thoại phải có 10 chữ số và bắt đầu bằng 0" required />
+                    <span asp-validation-for="DienThoai" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DiaChi" class="form-label"></label>
+                    <input asp-for="DiaChi" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Đăng ký</button>
+            </form>
+
+            <div class="mt-4 text-center">
+                <a asp-area="User" asp-controller="TaiKhoan" asp-action="DangNhap">
+                    🔐 Đã có tài khoản? Đăng nhập
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const matkhau = document.getElementById("matkhau");
+        const xacnhan = document.getElementById("xacnhan");
+        const matchStatus = document.getElementById("match-status");
+        const pwdStrength = document.getElementById("pwd-strength");
+
+        matkhau.addEventListener("input", function () {
+            const val = this.value;
+            let strength = "🔴 Yếu";
+
+            if (val.length >= 8 && /[A-Z]/.test(val) && /[\d\W]/.test(val)) {
+                strength = "🟢 Mạnh";
+            } else if (val.length >= 6 && /[\d]/.test(val)) {
+                strength = "🟡 Trung bình";
+            }
+
+            pwdStrength.textContent = "Độ mạnh mật khẩu: " + strength;
+        });
+
+        xacnhan.addEventListener("input", function () {
+            if (xacnhan.value !== matkhau.value) {
+                matchStatus.textContent = "❌ Mật khẩu chưa khớp.";
+            } else {
+                matchStatus.textContent = "";
+            }
+        });
+    </script>
+}

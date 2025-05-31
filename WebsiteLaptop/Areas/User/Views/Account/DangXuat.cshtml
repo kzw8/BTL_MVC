@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Xác nhận đăng xuất";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="alert alert-warning">
+        <h4 class="alert-heading">Bạn có chắc muốn đăng xuất không?</h4>
+        <p>Chọn <strong>Đăng xuất</strong> để thoát khỏi hệ thống.</p>
+
+        <form asp-area="User" asp-controller="TaiKhoan" asp-action="DangXuatXacNhan" method="post">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-danger">Đăng xuất</button>
+            <a asp-controller="Laptop" asp-action="Index" class="btn btn-secondary">Huỷ</a>
+        </form>
+    </div>
+</div>
