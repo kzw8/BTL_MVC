@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebsiteLaptop.Data;
 using WebsiteLaptop.Models;
+using WebsiteLaptop.Services;
 
 namespace WebsiteLaptop.Areas.User.Controllers
 {
@@ -12,18 +13,40 @@ namespace WebsiteLaptop.Areas.User.Controllers
     public class LaptopController : Controller
     {
         private readonly WebsiteLaptopContext _context;
+        private readonly LaptopSearchService _searchService;
 
-        public LaptopController(WebsiteLaptopContext context)
+        public LaptopController(WebsiteLaptopContext context, LaptopSearchService searchService)
         {
             _context = context;
+            _searchService = searchService;
         }
 
         [HttpGet]
-        public async Task<IActionResult> DanhSach()
-        {
-            var list = await _context.Laptop.AsNoTracking().ToListAsync();
-            return View(list);
+        [HttpGet]
+        public IActionResult DanhSach(string? q, int? categoryId)
+        { 
+            var query = _context.Laptop
+                .Include(l => l.HinhAnhLaptops)
+                .Include(l => l.DanhMuc)
+                .Include(l => l.ThongSoKyThuat)
+                .Where(l => !l.DaXoa)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(q))
+            {
+                q = q.Trim().ToLower(); // ✅ hạ về chữ thường
+
+                query = query.Where(l =>
+                    l.TenLaptop.ToLower().Contains(q) ||
+                    l.HangSanXuat.ToLower().Contains(q));
+            }
+            if (categoryId.HasValue)
+                query = query.Where(l => l.MaDanhMuc == categoryId.Value);
+            ViewBag.TuKhoa = q;
+            ViewBag.CategoryId = categoryId;    
+            return View(query.OrderByDescending(l => l.NgayTao).ToList());
         }
+
 
         [HttpGet]
         public async Task<IActionResult> ChiTiet(int? id)
@@ -32,90 +55,14 @@ namespace WebsiteLaptop.Areas.User.Controllers
 
             var laptop = await _context.Laptop
                 .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.MaLaptop == id);
+                .Include(l => l.DanhMuc)
+                .Include(l => l.ThongSoKyThuat)
+                .Include(l => l.HinhAnhLaptops)
+                .FirstOrDefaultAsync(l => l.MaLaptop == id && !l.DaXoa);
 
             if (laptop == null) return NotFound();
 
             return View(laptop);
-        }
-
-        [HttpGet]
-        public IActionResult TaoMoi()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> TaoMoi([Bind("Id,Ten,Gia,MoTa,DanhMucId,AnhUrl")] Laptop laptop)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(laptop);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(DanhSach));
-            }
-            return View(laptop);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> ChinhSua(int? id)
-        {
-            if (id == null) return NotFound();
-
-            var laptop = await _context.Laptop.FindAsync(id);
-            if (laptop == null) return NotFound();
-
-            return View(laptop);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ChinhSua(int id, [Bind("Id,Ten,Gia,MoTa,DanhMucId,AnhUrl")] Laptop laptop)
-        {
-            if (id != laptop.MaLaptop) return BadRequest();
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(laptop);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!_context.Laptop.Any(e => e.MaLaptop == laptop.MaLaptop))
-                        return NotFound();
-                    else
-                        throw;
-                }
-                return RedirectToAction(nameof(DanhSach));
-            }
-            return View(laptop);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> Xoa(int? id)
-        {
-            if (id == null) return NotFound();
-
-            var laptop = await _context.Laptop
-                .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.MaLaptop == id);
-
-            if (laptop == null) return NotFound();
-
-            return View(laptop);
-        }
-
-        [HttpPost, ActionName("Xoa")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> XoaXacNhan(int id)
-        {
-            var laptop = await _context.Laptop.FindAsync(id);
-            _context.Laptop.Remove(laptop);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(DanhSach));
         }
 
         [HttpGet]
@@ -123,10 +70,46 @@ namespace WebsiteLaptop.Areas.User.Controllers
         {
             var laptops = _context.Laptop
                 .Include(l => l.DanhMuc)
+                .Where(l => !l.DaXoa)
                 .OrderByDescending(l => l.NgayTao)
                 .ToList();
 
             return View(laptops);
+        }
+
+        [HttpGet]
+        public IActionResult SanPhamDaAn()
+        {
+            var laptops = _context.Laptop
+                .Include(l => l.DanhMuc)
+                .Where(l => l.DaXoa)
+                .ToList();
+
+            return View(laptops);
+        }
+
+        [HttpPost]
+        public IActionResult AnSanPham(int id)
+        {
+            var laptop = _context.Laptop.Find(id);
+            if (laptop == null) return NotFound();
+
+            laptop.DaXoa = true;
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(QuanLy));
+        }
+
+        [HttpPost]
+        public IActionResult KhoiPhucSanPham(int id)
+        {
+            var laptop = _context.Laptop.Find(id);
+            if (laptop == null) return NotFound();
+
+            laptop.DaXoa = false;
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(SanPhamDaAn));
         }
 
         [HttpGet]
@@ -137,7 +120,7 @@ namespace WebsiteLaptop.Areas.User.Controllers
             return View(ts);
         }
 
-        [HttpPost, ValidateAntiForgeryToken]
+        [HttpPost]
         public IActionResult SuaThongSo(ThongSoKyThuat ts)
         {
             if (!ModelState.IsValid)

@@ -99,6 +99,57 @@ public class DonHangController : Controller
 
         return View("InHoaDon", donHang); // View dùng layout riêng (in)
     }
+    [HttpPost]
+    public async Task<IActionResult> XacNhan(string DiaChiGiaoHang, string DienThoaiGiaoHang)
+    {
+        var userId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+
+        var gioHang = await _context.ChiTietGioHang
+            .Include(c => c.Laptop)
+            .Where(c => c.MaNguoiDung == userId)
+            .ToListAsync();
+
+        if (!gioHang.Any())
+            return RedirectToAction("Index", "GioHang");
+
+        // Tính tổng tiền
+        var tongTien = gioHang.Sum(c => c.SoLuong * c.Laptop.Gia);
+
+        // Tạo đơn hàng mới
+        var donHang = new DonHang
+        {
+            MaNguoiDung = userId,
+            NgayDatHang = DateTime.UtcNow,
+            TrangThai = "Chờ xử lý",
+            TongTien = tongTien,
+            DiaChiGiaoHang = DiaChiGiaoHang,
+            DienThoaiGiaoHang = DienThoaiGiaoHang
+        };
+        _context.DonHang.Add(donHang);
+        await _context.SaveChangesAsync();
+
+        // Thêm chi tiết đơn hàng
+        foreach (var item in gioHang)
+        {
+            var chiTiet = new DonHangChiTiet
+            {
+                MaDonHang = donHang.MaDonHang,
+                MaLaptop = item.MaLaptop,
+                SoLuong = item.SoLuong,
+                DonGia = item.Laptop.Gia
+            };
+            _context.DonHangChiTiet.Add(chiTiet);
+        }
+
+        // Xóa giỏ hàng sau khi thanh toán
+        _context.ChiTietGioHang.RemoveRange(gioHang);
+        await _context.SaveChangesAsync();
+
+        // Chuyển về trang quản lý đơn hàng (có thể đổi sang ThankYou nếu cần)
+        return Redirect("/Admin/DonHang/DanhSach");
+    }
+
 
 
 }

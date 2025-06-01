@@ -1,0 +1,184 @@
+﻿@model WebsiteLaptop.Models.DangKy
+@{
+    ViewBag.Title = "Đăng ký";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - LaptopKZW</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .register-card {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 40px;
+            color: white;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+            .form-control:focus {
+                background-color: rgba(255, 255, 255, 0.15);
+                color: white;
+            }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .input-group-text {
+            background: transparent;
+            border: none;
+            color: white;
+        }
+
+        .input-icon {
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            border-radius: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-card">
+        <h3 class="text-center fw-bold mb-4">ĐĂNG KÝ TÀI KHOẢN</h3>
+        <form asp-action="DangKy" method="post" id="form-register">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="TenDangNhap" class="form-label">Tên đăng nhập</label>
+                    <input asp-for="TenDangNhap" class="form-control" minlength="4" maxlength="12" required />
+                    <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control" type="email" required />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="MatKhau" class="form-label">Mật khẩu</label>
+                    <div class="input-group">
+                        <input asp-for="MatKhau" type="password" class="form-control" id="matkhau" required />
+                        <span class="input-group-text input-icon" onclick="togglePwd()">
+                            <i class="fa-solid fa-eye" id="eye"></i>
+                        </span>
+                    </div>
+                    <span asp-validation-for="MatKhau" class="text-danger"></span>
+                    <div class="form-text" id="pwd-strength"></div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" id="xacnhan" required />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    <div class="form-text text-danger" id="match-status"></div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="HoVaTen" class="form-label">Họ và tên</label>
+                <input asp-for="HoVaTen" class="form-control" required />
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DienThoai" class="form-label">Số điện thoại</label>
+                    <input asp-for="DienThoai" class="form-control" pattern="0\d{9}" maxlength="10"
+                           title="Số điện thoại phải có 10 chữ số và bắt đầu bằng 0" required />
+                    <span asp-validation-for="DienThoai" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DiaChi" class="form-label">Địa chỉ</label>
+                    <input asp-for="DiaChi" class="form-control" required />
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-outline-light w-100 btn-submit">Đăng ký</button>
+
+            <div class="text-center mt-4">
+                <span>Đã có tài khoản?</span>
+                <a asp-action="DangNhap" class="text-white-50 fw-bold">Đăng nhập</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- ✅ Toast sau khi đăng ký thành công -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+            <div class="toast align-items-center text-white bg-success border-0 show" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">@TempData["Success"]</div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <script>
+        const matkhau = document.getElementById("matkhau");
+        const xacnhan = document.getElementById("xacnhan");
+        const matchStatus = document.getElementById("match-status");
+        const pwdStrength = document.getElementById("pwd-strength");
+
+        function togglePwd() {
+            const icon = document.getElementById("eye");
+            if (matkhau.type === "password") {
+                matkhau.type = "text";
+                icon.classList.replace("fa-eye", "fa-eye-slash");
+            } else {
+                matkhau.type = "password";
+                icon.classList.replace("fa-eye-slash", "fa-eye");
+            }
+        }
+
+       
+
+        xacnhan?.addEventListener("input", function () {
+            matchStatus.textContent = xacnhan.value !== matkhau.value ? "❌ Mật khẩu chưa khớp." : "";
+        });
+
+        const toastEl = document.querySelector('.toast');
+        if (toastEl) {
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

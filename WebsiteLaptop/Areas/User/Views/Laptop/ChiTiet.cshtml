@@ -1,73 +1,140 @@
-﻿@model Laptop
+﻿@model WebsiteLaptop.Models.Laptop
 @using System.Globalization
-@using WebsiteLaptop.Models
 
 @{
     ViewBag.Title = Model.TenLaptop;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-lg-6">
-            <img src="@Model.DuongDanAnh" class="img-fluid rounded" alt="@Model.TenLaptop" />
-            <div class="mt-3 d-flex gap-2">
-                <img src="@Model.DuongDanAnh" class="img-thumbnail" style="width: 100px; height: 75px; object-fit: cover;" />
-            </div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
+
+<div class="container mt-5">
+    <div class="row g-4">
+        <!-- Ảnh sản phẩm -->
+        <div class="col-md-6">
+            @if (Model.HinhAnhLaptops?.Any() == true)
+            {
+                <a href="@Model.HinhAnhLaptops.First().DuongDan" id="main-preview">
+                    <img src="@Model.HinhAnhLaptops.First().DuongDan "
+                         class="img-fluid rounded border shadow-sm" alt="@Model.TenLaptop" style="width:580px; height:480px;" />
+                </a>
+
+                <div id="lightgallery" class="mt-3 d-flex flex-wrap gap-2">
+                    @foreach (var hinh in Model.HinhAnhLaptops)
+                    {
+                        <a href="@hinh.DuongDan">
+                            <img src="@hinh.DuongDan" class="img-thumbnail" style="width:90px; height:70px; object-fit:cover;" />
+                        </a>
+                    }
+                </div>
+            }
+            else
+            {
+                <img src="/images/no-image.png" class="img-fluid rounded" alt="Không có ảnh" />
+            }
         </div>
 
-        <div class="col-lg-6">
-            <h2>@Model.TenLaptop</h2>
-            <h4 class="text-danger">
+        <!-- Thông tin sản phẩm -->
+        <div class="col-md-6">
+            <h3 class="mb-3 fw-bold">@Model.TenLaptop</h3>
+
+            <h4 class="text-danger fw-bold mb-3">
                 @Model.Gia.ToString("N0", CultureInfo.GetCultureInfo("vi-VN")) đ
             </h4>
 
-            <div class="mb-3">
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-half text-warning"></i>
-                <i class="bi bi-star text-warning"></i>
-                <span class="ms-2">(4.5/5)</span>
-            </div>
+            <p><strong>Hãng:</strong> @Model.HangSanXuat</p>
+            <p><strong>Danh mục:</strong> @Model.DanhMuc?.TenDanhMuc</p>
 
-            <p>@Model.MoTa</p>
-
-            <div class="d-flex gap-2">
-                <a asp-controller="GioHang"
-                   asp-action="ThemVaoGio"
-                   asp-route-id="@Model.MaLaptop"
-                   class="btn btn-success btn-lg">
-                    <i class="bi bi-cart-plus"></i> Thêm vào giỏ
+            <div class="mt-4 d-flex gap-2">
+                <a asp-controller="GioHang" asp-action="ThemVaoGio" asp-route-id="@Model.MaLaptop" class="btn btn-success btn-lg">
+                    Thêm vào giỏ hàng
                 </a>
-                <a asp-action="DanhSach" asp-controller="SanPham" class="btn btn-outline-secondary btn-lg">
-                    <i class="bi bi-arrow-left"></i> Quay lại
+                <a asp-action="DanhSach" asp-controller="Laptop" class="btn btn-outline-secondary btn-lg">
+                    Quay lại
                 </a>
             </div>
         </div>
     </div>
 
-    <hr class="my-5" />
-
-    <ul class="nav nav-tabs" id="detailTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="desc-tab"
-                    data-bs-toggle="tab" data-bs-target="#desc"
-                    type="button" role="tab">
-                Mô tả
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="spec-tab"
-                    data-bs-toggle="tab" data-bs-target="#spec"
-                    type="button" role="tab">
-                Thông số
-            </button>
-        </li>
-    </ul>
-    <div class="tab-content border border-top-0 p-4" id="detailTabContent">
-        <div class="tab-pane fade show active" id="desc" role="tabpanel">
-            @Model.MoTa
+    <!-- Thông số kỹ thuật -->
+    @if (Model.ThongSoKyThuat != null)
+    {
+        <hr class="my-5" />
+        <h4 class="mb-4">Thông số kỹ thuật</h4>
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.CPU))
+            {
+                <div class="col"><strong>CPU:</strong> @Model.ThongSoKyThuat.CPU</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.RAM))
+            {
+                <div class="col"><strong>RAM:</strong> @Model.ThongSoKyThuat.RAM</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.OCung))
+            {
+                <div class="col"><strong>Ổ cứng:</strong> @Model.ThongSoKyThuat.OCung</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.CardDoHoa))
+            {
+                <div class="col"><strong>Card đồ họa:</strong> @Model.ThongSoKyThuat.CardDoHoa</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.ManHinh))
+            {
+                <div class="col"><strong>Màn hình:</strong> @Model.ThongSoKyThuat.ManHinh</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.CongGiaoTiep))
+            {
+                <div class="col"><strong>Cổng giao tiếp:</strong> @Model.ThongSoKyThuat.CongGiaoTiep</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.Audio))
+            {
+                <div class="col"><strong>Audio:</strong> @Model.ThongSoKyThuat.Audio</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.LAN))
+            {
+                <div class="col"><strong>LAN:</strong> @Model.ThongSoKyThuat.LAN</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.WIFI))
+            {
+                <div class="col"><strong>Wi-Fi:</strong> @Model.ThongSoKyThuat.WIFI</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.Bluetooth))
+            {
+                <div class="col"><strong>Bluetooth:</strong> @Model.ThongSoKyThuat.Bluetooth</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.Webcam))
+            {
+                <div class="col"><strong>Webcam:</strong> @Model.ThongSoKyThuat.Webcam</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.HeDieuHanh))
+            {
+                <div class="col"><strong>Hệ điều hành:</strong> @Model.ThongSoKyThuat.HeDieuHanh</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.Pin))
+            {
+                <div class="col"><strong>Pin:</strong> @Model.ThongSoKyThuat.Pin</div>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.ThongSoKyThuat.TrongLuong))
+            {
+                <div class="col"><strong>Trọng lượng:</strong> @Model.ThongSoKyThuat.TrongLuong</div>
+            }
         </div>
-    </div>
+    }
 </div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+    <script>
+        lightGallery(document.getElementById("lightgallery"), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 400
+        });
+
+        document.getElementById("main-preview")?.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector("#lightgallery a")?.click();
+        });
+    </script>
+}

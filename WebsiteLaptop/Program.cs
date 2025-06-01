@@ -3,11 +3,14 @@
     using Microsoft.EntityFrameworkCore;
     using WebsiteLaptop.Data;
     using WebsiteLaptop.Models;
+    using WebsiteLaptop.Services;
 
     var builder = WebApplication.CreateBuilder(args);
 
     // 1. Đăng ký DI
     builder.Services.AddHttpContextAccessor();
+    builder.Services.AddScoped<LaptopSearchService>();
+
 
     builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
         .AddCookie(options =>
@@ -108,5 +111,6 @@ using (var scope = app.Services.CreateScope())
             Console.WriteLine("✅ Đã thêm danh mục mẫu.");
         }
     }
+
 
     app.Run();

@@ -12,7 +12,7 @@ namespace WebsiteLaptop.Models
         public int MaLaptop { get; set; }
 
         [ForeignKey("MaLaptop")]
-        public Laptop Laptop { get; set; }
+        public Laptop? Laptop { get; set; }
 
         public string? CPU { get; set; } = string.Empty;
         public string? RAM { get; set; } = string.Empty;
@@ -26,7 +26,7 @@ namespace WebsiteLaptop.Models
         public string? Bluetooth { get; set; } = string.Empty;
         public string? Webcam { get; set; } = string.Empty;
         public string? HeDieuHanh { get; set; } = string.Empty;
-        public string Pin { get; set; } = string.Empty;
+        public string? Pin { get; set; } = string.Empty;
         public string? TrongLuong { get; set; } = string.Empty;
     }
 }

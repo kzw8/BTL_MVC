@@ -1,0 +1,122 @@
+﻿@model IEnumerable<WebsiteLaptop.Models.ChiTietGioHang>
+@{
+    ViewBag.Title = "Giỏ hàng của bạn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Giỏ hàng</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center">
+            Giỏ hàng của bạn đang trống.
+        </div>
+    }
+    else
+    {
+        <form method="post" asp-controller="GioHang" asp-action="CapNhatSoLuong" id="formDatHang">
+            <table class="table table-bordered align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th><input type="checkbox" id="chonTatCa" /></th>
+                        <th>Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Tổng</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        var tong = item.SoLuong * item.Laptop.Gia;
+                        var hinh = item.Laptop.HinhAnhLaptops.FirstOrDefault()?.DuongDan;
+                        var anh = string.IsNullOrEmpty(hinh) ? "/images/no-image.png" : hinh;
+
+                        <tr>
+                            <td class="text-center align-middle">
+                                <input type="checkbox" class="chon-sp" data-id="@item.MaChiTietGioHang" data-tong="@tong" />
+                            </td>
+                            <td class="text-center align-middle">
+                                <img src="@anh" width="80" class="rounded" />
+                            </td>
+                            <td>@item.Laptop.TenLaptop</td>
+                            <td>@item.Laptop.Gia.ToString("N0") đ</td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <form method="post" asp-action="CapNhatSoLuong" asp-controller="GioHang" class="d-flex border rounded">
+                                        <input type="hidden" name="id" value="@item.MaChiTietGioHang" />
+                                        <button type="submit" name="soLuong" value="@(item.SoLuong - 1)" class="btn btn-outline-secondary border-0 px-3 py-1" @(item.SoLuong == 1 ? "disabled" : "")>-</button>
+                                        <div class="px-3 py-1">@item.SoLuong</div>
+                                        <button type="submit" name="soLuong" value="@(item.SoLuong + 1)" class="btn btn-outline-secondary border-0 px-3 py-1">+</button>
+                                    </form>
+                                </div>
+                            </td>
+                            <td>@tong.ToString("N0") đ</td>
+                            <td>
+                                <a asp-action="Xoa" asp-route-id="@item.MaChiTietGioHang" class="btn btn-sm btn-danger">Xoá</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div class="mt-4 d-flex justify-content-between align-items-center">
+                <div class="fs-5">
+                    Tổng tiền: <strong id="tongTien" class="text-danger">0 ₫</strong>
+                </div>
+                <input type="hidden" id="sanPhamChon" name="sanPhamIds" />
+                <button type="submit"
+                        formaction="/User/DatHang/TaoDon"
+                        formmethod="post"
+                        class="btn btn-danger"
+                        id="btn-dat-hang"
+                        disabled>
+                    Đặt hàng
+                </button>
+            </div>
+        </form>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"].chon-sp');
+        const tongTienEl = document.getElementById("tongTien");
+        const btnDatHang = document.getElementById("btn-dat-hang");
+        const hiddenInput = document.getElementById("sanPhamChon");
+        const chonTatCa = document.getElementById("chonTatCa");
+
+        function formatTien(val) {
+            return val.toLocaleString("vi-VN") + " ₫";
+        }
+
+        function capNhatTongTien() {
+            let tong = 0;
+            let ids = [];
+
+            checkboxes.forEach(chk => {
+                if (chk.checked) {
+                    const tien = parseFloat(chk.dataset.tong);
+                    tong += tien;
+                    ids.push(chk.dataset.id);
+                }
+            });
+
+            tongTienEl.textContent = formatTien(tong);
+            hiddenInput.value = ids.join(",");
+            btnDatHang.disabled = ids.length === 0;
+        }
+
+        checkboxes.forEach(chk => chk.addEventListener("change", capNhatTongTien));
+
+        if (chonTatCa) {
+            chonTatCa.addEventListener("change", function () {
+                checkboxes.forEach(c => c.checked = this.checked);
+                capNhatTongTien();
+            });
+        }
+    </script>
+}

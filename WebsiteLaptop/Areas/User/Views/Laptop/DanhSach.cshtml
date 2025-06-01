@@ -1,37 +1,62 @@
-﻿@model IEnumerable<Laptop>
-@using System.Linq
-@using WebsiteLaptop.Models
+﻿@model IEnumerable<WebsiteLaptop.Models.Laptop>
 @{
     ViewBag.Title = "Danh sách sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var keyword = ViewBag.TuKhoa as string;
+    var categoryId = ViewBag.CategoryId as int?;
 }
 
-<h1>@ViewBag.Title</h1>
-<p>
-    <a asp-action="TaoMoi" class="btn btn-primary">Thêm sản phẩm</a>
-</p>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(m => m.First().TenLaptop)</th>
-            <th>@Html.DisplayNameFor(m => m.First().HangSanXuat)</th>
-            <th>@Html.DisplayNameFor(m => m.First().Gia)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+<div class="container mt-4">
+    <h2 class="text-center mb-4">
+        @if (!string.IsNullOrWhiteSpace(keyword))
         {
-            <tr>
-                <td>@item.TenLaptop</td>
-                <td>@item.HangSanXuat</td>
-                <td>@item.Gia.ToString("N0") đ</td>
-                <td>
-                    <a asp-action="ChinhSua" asp-route-id="@item.MaLaptop">Sửa</a> |
-                    <a asp-action="ChiTiet" asp-route-id="@item.MaLaptop">Chi tiết</a> |
-                    <a asp-action="Xoa" asp-route-id="@item.MaLaptop">Xoá</a>
-                </td>
-            </tr>
+            <span>Kết quả tìm kiếm cho: "<strong>@keyword</strong>"</span>
         }
-    </tbody>
-</table>
+        else if (categoryId.HasValue)
+        {
+            <span>Sản phẩm theo danh mục</span>
+        }
+        else
+        {
+            <span>@ViewBag.Title</span>
+        }
+    </h2>
+
+    @if (Model.Any())
+    {
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            @foreach (var item in Model)
+            {
+                var hinh = item.HinhAnhLaptops.FirstOrDefault()?.DuongDan;
+                var anh = string.IsNullOrEmpty(hinh) ? "/images/no-image.png" : hinh;
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <a asp-action="ChiTiet" asp-route-id="@item.MaLaptop" class="text-decoration-none text-dark">
+                            <img src="@anh" alt="@item.TenLaptop" class="card-img-top" style="height:180px; object-fit:contain;" />
+                            <div class="card-body px-3 pt-2">
+                                <h6 class="card-title text-truncate fw-bold mb-2">@item.TenLaptop</h6>
+                                <div class="text-danger fw-bold fs-5">@item.Gia.ToString("N0") đ</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center mt-4">
+            Không tìm thấy sản phẩm nào phù hợp
+            @if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                <span>với từ khóa <strong>"@keyword"</strong>.</span>
+            }
+            <div class="mt-3">
+                <a href="@Url.Action("DanhSach", "Laptop", new { area = "User" })" class="btn btn-outline-primary">
+                    🔁 Quay lại danh sách tất cả sản phẩm
+                </a>
+            </div>
+        </div>
+    }
+</div>

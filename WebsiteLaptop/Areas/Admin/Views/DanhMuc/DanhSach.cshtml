@@ -7,11 +7,11 @@
 }
 
 <div class="container mt-4">
-    <h2 class="mb-3">📂 Danh sách danh mục hiện hành</h2>
+    <h2 class="mb-3">Danh sách danh mục</h2>
 
     <div class="d-flex gap-2 mb-3">
-        <a asp-action="TaoMoi" class="btn btn-success">➕ Thêm danh mục</a>
-        <a asp-action="DanhMucDaAn" class="btn btn-outline-secondary">🗃️ Xem danh mục đã ẩn</a>
+        <a asp-action="TaoMoi" class="btn btn-success">Thêm danh mục</a>
+        <a asp-action="DanhMucDaAn" class="btn btn-outline-secondary">Xem danh mục đã ẩn</a>
     </div>
 
     <form asp-action="AnNhieu" method="post">
@@ -56,7 +56,7 @@
         </table>
 
         <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn ẩn các danh mục đã chọn không?')">
-            🗑️ Xóa danh mục đã chọn
+            🗑️ Xóa
         </button>
     </form>
 </div>

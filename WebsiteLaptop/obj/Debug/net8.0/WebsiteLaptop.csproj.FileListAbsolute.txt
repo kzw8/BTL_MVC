@@ -267,6 +267,7 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.RazorAssemblyInfo.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.RazorAssemblyInfo.cs
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.sourcelink.json
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\bundle\WebsiteLaptop.styles.css
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\projectbundle\WebsiteLaptop.bundle.scp.css
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\staticwebassets.build.json
@@ -280,4 +281,4 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\refint\Website
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.pdb
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.genruntimeconfig.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\ref\WebsiteLaptop.dll
-C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\FuzzySharp.dll

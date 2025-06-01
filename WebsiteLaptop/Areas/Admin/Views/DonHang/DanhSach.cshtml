@@ -16,7 +16,7 @@
 }
 
 <div class="container mt-4">
-    <h2 class="mb-4">📦 Danh sách đơn hàng</h2>
+    <h2 class="mb-4">Danh sách đơn hàng</h2>
 
     <!-- Bộ lọc -->
     <form method="get" class="row mb-4">
@@ -40,7 +40,7 @@
 
         </div>
         <div class="col-md-3 d-flex align-items-end">
-            <button type="submit" class="btn btn-primary">🔍 Lọc</button>
+            <button type="submit" class="btn btn-primary">Lọc</button>
         </div>
     </form>
 
@@ -82,7 +82,7 @@
 
                         <td>@String.Format("{0:N0} ₫", dh.TongTien)</td>
                         <td class="d-flex gap-2">
-                            <a asp-action="ChiTiet" asp-route-id="@dh.MaDonHang" class="btn btn-info btn-sm">🔍 Xem</a>
+                            <a asp-action="ChiTiet" asp-route-id="@dh.MaDonHang" class="btn btn-info btn-sm">Xem</a>
                             <a asp-action="InHoaDon" asp-route-id="@dh.MaDonHang" class="btn btn-outline-dark btn-sm" target="_blank">🖨️ In</a>
                         </td>
                     </tr>

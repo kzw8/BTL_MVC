@@ -7,9 +7,11 @@
 }
 
 <div class="container mt-4">
-    <h2 class="mb-4">📋 Danh sách Laptop</h2>
+    <h2 class="mb-4">Danh sách Laptop</h2>
 
-    <a asp-action="Them" class="btn btn-success mb-3">➕ Thêm Laptop mới</a>
+    <a asp-action="Them" class="btn btn-success mb-3">Thêm Laptop mới</a>
+    <a asp-action="SanPhamDaAn" class="btn btn-outline-secondary mb-3">Xem sản phẩm đã ẩn</a>
+
 
     <table class="table table-bordered table-hover align-middle">
         <thead class="table-dark">
@@ -38,7 +40,7 @@
                             }
                             @if (anhDaiDien != null)
                             {
-                                <img src="@anhDaiDien.DuongDan" style="height:60px;" class="rounded" />
+                                <img src="@anhDaiDien.DuongDan" style="width: 80px; height: 60px; object-fit: cover;" class="rounded border" />
                             }
                         </td>
 
@@ -48,9 +50,9 @@
                         <td>@item.DanhMuc?.TenDanhMuc</td>
                         <td>@item.NgayTao.ToString("dd/MM/yyyy")</td>
                         <td class="text-center">
-                            <a asp-action="Detail" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-info">🔍</a>
-                            <a asp-action="Edit" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-warning">✏️</a>
-                            <a asp-action="Delete" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-danger" onclick="return confirm('Xoá sản phẩm này?');">❌</a>
+                            <a asp-action="ChiTiet" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-info">Chi tiết</a>
+                            <a asp-action="ChinhSua" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-warning">Chỉnh sửa</a>
+                            <a asp-action="AnSanPham" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-danger" onclick="return confirm('Xoá sản phẩm này?');">Xóa</a>
                         </td>
                     </tr>
                 }

@@ -79,7 +79,7 @@ namespace WebsiteLaptop.Areas.User.Controllers
                 if (User.IsInRole("Admin"))
                     return RedirectToAction("DanhSach", "Laptop", new { area = "Admin" });
 
-                return RedirectToAction("DanhSach", "Laptop");
+                return RedirectToAction("DanhSach", "Laptop", new { area = "User" });
             }
 
             return View(new DangKy());
@@ -91,14 +91,17 @@ namespace WebsiteLaptop.Areas.User.Controllers
             if (!ModelState.IsValid)
                 return View(vm);
 
-            bool exists = await _context.NguoiDung.AnyAsync(u => u.TenDangNhap == vm.TenDangNhap || u.Email == vm.Email);
+            // Kiểm tra trùng tài khoản
+            bool exists = await _context.NguoiDung
+                .AnyAsync(u => u.TenDangNhap == vm.TenDangNhap || u.Email == vm.Email);
 
             if (exists)
             {
-                ModelState.AddModelError("", "Tên đăng nhập hoặc email đã tồn tại");
+                ModelState.AddModelError("", "Tên đăng nhập hoặc Email đã tồn tại.");
                 return View(vm);
             }
 
+            // Tạo mới người dùng
             var user = new NguoiDung
             {
                 TenDangNhap = vm.TenDangNhap,
@@ -109,13 +112,20 @@ namespace WebsiteLaptop.Areas.User.Controllers
                 VaiTro = "User"
             };
 
-            user.MatKhau = new PasswordHasher<NguoiDung>().HashPassword(user, vm.MatKhau);
+            // Băm mật khẩu
+            var hasher = new PasswordHasher<NguoiDung>();
+            user.MatKhau = hasher.HashPassword(user, vm.MatKhau);
 
+            // Lưu vào CSDL
             _context.NguoiDung.Add(user);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(DangNhap));
+            // Gửi thông báo toast
+            TempData["Success"] = "Đăng ký thành công! Bạn có thể đăng nhập.";
+
+            return RedirectToAction("DangNhap");
         }
+
 
         [HttpGet]
         public IActionResult DangXuat()

@@ -1,0 +1,43 @@
+﻿@model List<WebsiteLaptop.Models.DonHang>
+@{
+    ViewBag.Title = "Tra cứu đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Danh sách đơn hàng của bạn</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Số đơn</th>
+                    <th>Ngày đặt</th>
+                    <th>Trạng thái</th>
+                    <th>Tổng tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    var dh = Model[i];
+                    <tr>
+                        <td class="text-center">@((i + 1))</td>
+                        <td>@dh.NgayDatHang.ToString("dd/MM/yyyy")</td>
+                        <td>@dh.TrangThai</td>
+                        <td>@dh.TongTien.ToString("N0") đ</td>
+                        <td class="text-center">
+                            <a asp-action="ChiTiet" asp-route-id="@dh.MaDonHang" class="btn btn-sm btn-outline-primary">Chi tiết</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center">Bạn chưa có đơn hàng nào.</div>
+    }
+</div>

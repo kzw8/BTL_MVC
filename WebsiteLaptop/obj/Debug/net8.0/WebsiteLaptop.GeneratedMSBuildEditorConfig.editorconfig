@@ -80,8 +80,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFwdG9wXFF1YW5MeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/Admin/Views/Laptop/SanPhamDaXoa.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFwdG9wXFNhblBoYW1EYVhvYS5jc2h0bWw=
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/Admin/Views/Laptop/SanPhamDaAn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTGFwdG9wXFNhblBoYW1EYUFuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/Admin/Views/Laptop/TaoMoi.cshtml]
@@ -92,20 +92,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/Account/DangKy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xBY2NvdW50XERhbmdLeS5jc2h0bWw=
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/DatHang/CamOn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xEYXRIYW5nXENhbU9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/Account/DangNhap.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xBY2NvdW50XERhbmdOaGFwLmNzaHRtbA==
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/DatHang/DatHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xEYXRIYW5nXERhdEhhbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/Account/DangXuat.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xBY2NvdW50XERhbmdYdWF0LmNzaHRtbA==
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/DonHang/ChiTiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xEb25IYW5nXENoaVRpZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/Account/TuChoiTruyCap.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xBY2NvdW50XFR1Q2hvaVRydXlDYXAuY3NodG1s
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/DonHang/DanhSach.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xEb25IYW5nXERhbmhTYWNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/GioHang/GioHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xHaW9IYW5nXEdpb0hhbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/Laptop/ChiTiet.cshtml]
@@ -116,16 +120,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xMYXB0b3BcRGFuaFNhY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/Shared/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/TaiKhoan/DangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xUYWlLaG9hblxEYW5nS3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/TaiKhoan/DangNhap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xUYWlLaG9hblxEYW5nTmhhcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/TaiKhoan/DangXuat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xUYWlLaG9hblxEYW5nWHVhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/TaiKhoan/TuChoiTruyCap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xUYWlLaG9hblxUdUNob2lUcnV5Q2FwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Views/Shared/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Views/Shared/_Layout.cshtml]

@@ -18,7 +18,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult DanhSach()
         {
             return View();
         }
@@ -41,7 +41,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
 
             ViewBag.HangSanXuatList = new SelectList(hangList);
 
-            return View("Add");
+            return View("TaoMoi");
         }
 
 
@@ -97,7 +97,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
 
         //thong so ky thuat
         [HttpGet]
-        public IActionResult Detail(int id)
+        public IActionResult ChiTiet(int id)
         {
             var laptop = _context.Laptop
                 .Include(l => l.DanhMuc)
@@ -108,7 +108,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
             if (laptop == null)
                 return NotFound();
 
-            return View("Detail", laptop);
+            return View("ChiTiet", laptop);
         }
 
         //them thong so
@@ -131,10 +131,22 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
             _context.SaveChanges();
 
             TempData["Success"] = "Đã lưu thông số kỹ thuật";
-            return RedirectToAction("Detail", new { id = ts.MaLaptop });
+            return RedirectToAction("ChiTiet", new { id = ts.MaLaptop });
         }
 
         //sua thong so
+        [HttpGet]
+        public IActionResult SuaThongSo(int id)
+        {
+            var laptop = _context.Laptop
+                .Include(l => l.ThongSoKyThuat)
+                .FirstOrDefault(l => l.MaLaptop == id);
+
+            if (laptop == null) return NotFound();
+
+            return View("ChiTiet", laptop); // Tạo thêm view nếu cần
+        }
+
         // File: Areas/Admin/Controllers/LaptopController.cs
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -142,44 +154,52 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                foreach (var key in ModelState.Keys)
-                {
-                    var state = ModelState[key];
-                    foreach (var error in state.Errors)
-                    {
-                        Console.WriteLine($"{key}: {error.ErrorMessage}");
-                    }
-                }
+                var errors = ModelState
+                    .Where(kvp => kvp.Value.Errors.Count > 0)
+                    .Select(kvp => $"{kvp.Key}: {string.Join(", ", kvp.Value.Errors.Select(e => e.ErrorMessage))}")
+                    .ToList();
+
+                TempData["Error"] = "Lỗi ModelState:\n" + string.Join("\n", errors);
+                return RedirectToAction("ChiTiet", new { id = ts.MaLaptop });
             }
 
 
-            var thongSo = _context.ThongSoKyThuat.FirstOrDefault(x => x.MaThongSo == ts.MaThongSo);
-            if (thongSo == null) return NotFound();
+            if (ts.MaThongSo == 0)
+            {
+                _context.ThongSoKyThuat.Add(ts);
+                TempData["Success"] = "Đã thêm thông số kỹ thuật.";
+            }
+            else
+            {
+                var thongSo = _context.ThongSoKyThuat.FirstOrDefault(x => x.MaThongSo == ts.MaThongSo);
+                if (thongSo == null) return NotFound();
 
-            thongSo.CPU = ts.CPU;
-            thongSo.RAM = ts.RAM;
-            thongSo.OCung = ts.OCung;
-            thongSo.CardDoHoa = ts.CardDoHoa;
-            thongSo.ManHinh = ts.ManHinh;
-            thongSo.CongGiaoTiep = ts.CongGiaoTiep;
-            thongSo.Audio = ts.Audio;
-            thongSo.LAN = ts.LAN;
-            thongSo.WIFI = ts.WIFI;
-            thongSo.Bluetooth = ts.Bluetooth;
-            thongSo.Webcam = ts.Webcam;
-            thongSo.HeDieuHanh = ts.HeDieuHanh;
-            thongSo.Pin = ts.Pin;
-            thongSo.TrongLuong = ts.TrongLuong;
+                thongSo.CPU = ts.CPU;
+                thongSo.RAM = ts.RAM;
+                thongSo.OCung = ts.OCung;
+                thongSo.CardDoHoa = ts.CardDoHoa;
+                thongSo.ManHinh = ts.ManHinh;
+                thongSo.CongGiaoTiep = ts.CongGiaoTiep;
+                thongSo.Audio = ts.Audio;
+                thongSo.LAN = ts.LAN;
+                thongSo.WIFI = ts.WIFI;
+                thongSo.Bluetooth = ts.Bluetooth;
+                thongSo.Webcam = ts.Webcam;
+                thongSo.HeDieuHanh = ts.HeDieuHanh;
+                thongSo.Pin = ts.Pin;
+                thongSo.TrongLuong = ts.TrongLuong;
+
+                TempData["Success"] = "Cập nhật thông số thành công.";
+            }
 
             _context.SaveChanges();
-
-            TempData["Success"] = "Cập nhật thành công.";
-            return RedirectToAction("Detail", new { id = ts.MaLaptop });
+            return RedirectToAction("ChiTiet", new { id = ts.MaLaptop });
         }
+
 
         //get edit
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult ChinhSua(int id)
         {
             var laptop = _context.Laptop
                 .Include(l => l.HinhAnhLaptops)
@@ -194,7 +214,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
 
         //post edit
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Edit(Laptop model, List<IFormFile> HinhAnhFiles, List<int> XoaAnhIds)
+        public IActionResult ChinhSua(Laptop model, List<IFormFile> HinhAnhFiles, List<int> XoaAnhIds)
         {
             if (!ModelState.IsValid)
             {
@@ -248,12 +268,12 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
 
             _context.SaveChanges();
             TempData["Success"] = "Cập nhật thành công.";
-            return RedirectToAction("QuanLy");
+            return RedirectToAction("QuanLy");  
         }
 
         //delete
         [HttpGet]
-        public IActionResult Delete(int id)
+        public IActionResult AnSanPham(int id)
         {
             var laptop = _context.Laptop.FirstOrDefault(l => l.MaLaptop == id);
             if (laptop == null) return NotFound();
@@ -269,7 +289,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
 
         //san pham da xoa
         [HttpGet]
-        public IActionResult DaXoa(DateTime? tuNgay, DateTime? denNgay)
+        public IActionResult SanPhamDaAn(DateTime? tuNgay, DateTime? denNgay)
         {
             var query = _context.Laptop
                 .Include(l => l.DanhMuc)
@@ -301,7 +321,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
             _context.SaveChanges();
 
             TempData["Success"] = "Đã khôi phục sản phẩm.";
-            return RedirectToAction("DaXoa");
+            return RedirectToAction("SanPhamDaAn");
         }
         //khoi phuc nhieu
         [HttpPost]
@@ -315,7 +335,7 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
             }
             _context.SaveChanges();
             TempData["Success"] = $"Đã khôi phục {laptops.Count} sản phẩm.";
-            return RedirectToAction("DaXoa");
+            return RedirectToAction("SanPhamDaAn");
         }
 
 
