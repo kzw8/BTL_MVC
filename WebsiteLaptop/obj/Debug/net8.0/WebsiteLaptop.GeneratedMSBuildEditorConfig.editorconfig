@@ -108,6 +108,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xEb25IYW5nXERhbmhTYWNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/DonHang/InHoaDon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xEb25IYW5nXEluSG9hRG9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Lap_Trinh_Web_MVC/WebsiteLaptop/WebsiteLaptop/Areas/User/Views/GioHang/GioHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xHaW9IYW5nXEdpb0hhbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

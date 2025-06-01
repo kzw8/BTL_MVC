@@ -30,6 +30,8 @@ namespace WebsiteLaptop.Models
         public DateTime NgayTao { get; set; }
         public bool DaXoa { get; set; } = false;
         public DateTime? NgayXoa { get; set; }
+        [Range(1, int.MaxValue, ErrorMessage = "Số lượng phải lớn hơn 0")]
+        public int SoLuong { get; set; } = 1;
 
         public virtual DanhMuc? DanhMuc { get; set; }
         public virtual ThongSoKyThuat? ThongSoKyThuat { get; set; }

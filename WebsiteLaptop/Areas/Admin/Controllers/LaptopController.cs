@@ -338,6 +338,20 @@ namespace WebsiteLaptop.Areas.Admin.Controllers
             return RedirectToAction("SanPhamDaAn");
         }
 
+        [HttpPost]
+        public JsonResult CapNhatSoLuongAjax([FromBody] Laptop input)
+        {
+            var laptop = _context.Laptop.FirstOrDefault(l => l.MaLaptop == input.MaLaptop);
+            if (laptop == null)
+                return Json(new { success = false, message = "Không tìm thấy sản phẩm." });
+
+            laptop.SoLuong = input.SoLuong;
+            _context.SaveChanges();
+
+            return Json(new { success = true, soLuong = laptop.SoLuong });
+        }
+
+
 
     }
 }

@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\controllers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\controllers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\laptop\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\laptop\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\controllers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\controllers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\models\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\models\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\data\\websitelaptopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\data\\websitelaptopcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\laptop\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\laptop\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,56 +19,112 @@
       "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\quanly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\controllers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\controllers\\laptopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\migrations\\websitelaptopcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\migrations\\websitelaptopcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\migrations\\20250601084113_fix_laptop_soluong.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\migrations\\20250601084113_fix_laptop_soluong.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\models\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\models\\laptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\dathang\\camon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\dathang\\camon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\chinhsua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\chinhsua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\donhang\\inhoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\donhang\\inhoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\donhang\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\donhang\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\danhmuc\\taomoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\danhmuc\\taomoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\danhmuc\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\danhmuc\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\danhmuc\\danhmucdaan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\danhmuc\\danhmucdaan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\danhmuc\\_formdanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\danhmuc\\_formdanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\donhang\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\donhang\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\donhang\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\donhang\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\donhang\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\donhang\\danhsach.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\donhang\\inhoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\donhang\\inhoadon.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\taikhoan\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\taikhoan\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\controllers\\dathangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\controllers\\dathangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\views\\dathang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\views\\dathang\\dathang.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\views\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\user\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\user\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\models\\hinhanhlaptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\models\\hinhanhlaptop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\views\\laptop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\views\\laptop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\websitelaptop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\websitelaptop.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|c:\\lap_trinh_web_mvc\\websitelaptop\\websitelaptop\\areas\\admin\\views\\laptop\\taomoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E8085D5-EFA0-45C5-9021-BBDBDCCB387A}|WebsiteLaptop\\WebsiteLaptop.csproj|solutionrelative:websitelaptop\\areas\\admin\\views\\laptop\\taomoi.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,267 +138,384 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:38:26.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LaptopController.cs",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Controllers\\LaptopController.cs",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Controllers\\LaptopController.cs",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Controllers\\LaptopController.cs",
-              "RelativeToolTip": "WebsiteLaptop\\Controllers\\LaptopController.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAqwJ8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:28:43.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WebsiteLaptopContext.cs",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Data\\WebsiteLaptopContext.cs",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Data\\WebsiteLaptopContext.cs",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Data\\WebsiteLaptopContext.cs",
-              "RelativeToolTip": "WebsiteLaptop\\Data\\WebsiteLaptopContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA8AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T05:48:14.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Add.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Add.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Add.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Add.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T18:29:12.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Laptop.cs",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Models\\Laptop.cs",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Models\\Laptop.cs",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Models\\Laptop.cs",
-              "RelativeToolTip": "WebsiteLaptop\\Models\\Laptop.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAqwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T18:51:19.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "LaptopController.cs",
               "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Controllers\\LaptopController.cs",
               "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Controllers\\LaptopController.cs",
               "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Controllers\\LaptopController.cs",
               "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Controllers\\LaptopController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAuwJgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAwwGABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:18:14.532Z",
+              "WhenOpened": "2025-06-01T08:30:00.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Detail.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Detail.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Detail.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Detail.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEYAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T11:32:46.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "QuanLy.cshtml",
               "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\QuanLy.cshtml",
               "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\QuanLy.cshtml",
               "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\QuanLy.cshtml",
               "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\QuanLy.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADsAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAqwF8AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:36:37.34Z",
+              "WhenOpened": "2025-06-01T06:39:42.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Index.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Index.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwI0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:03:05.377Z",
+              "WhenOpened": "2025-06-01T06:40:57.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebsiteLaptopContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Migrations\\WebsiteLaptopContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Migrations\\WebsiteLaptopContextModelSnapshot.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Migrations\\WebsiteLaptopContextModelSnapshot.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Migrations\\WebsiteLaptopContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T08:49:23.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChiTiet.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\Laptop\\ChiTiet.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\Laptop\\ChiTiet.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\Laptop\\ChiTiet.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\Laptop\\ChiTiet.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAADYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T06:49:50.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DanhSach.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\Laptop\\DanhSach.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\Laptop\\DanhSach.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\Laptop\\DanhSach.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\Laptop\\DanhSach.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T08:24:16.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250601084113_Fix_Laptop_SoLuong.Designer.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Migrations\\20250601084113_Fix_Laptop_SoLuong.Designer.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Migrations\\20250601084113_Fix_Laptop_SoLuong.Designer.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Migrations\\20250601084113_Fix_Laptop_SoLuong.Designer.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Migrations\\20250601084113_Fix_Laptop_SoLuong.Designer.cs",
+              "ViewState": "AgIAAKkBAAAAAAAAAAAwwL0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T08:46:41.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Laptop.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Models\\Laptop.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Models\\Laptop.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Models\\Laptop.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Models\\Laptop.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T08:31:31.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InHoaDon.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\InHoaDon.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\InHoaDon.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\InHoaDon.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\InHoaDon.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:01:32.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChinhSua.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChinhSua.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChinhSua.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChinhSua.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChinhSua.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T06:39:10.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChiTiet.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChiTiet.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChiTiet.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChiTiet.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\ChiTiet.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T06:39:16.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DanhSach.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\DanhSach.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\DanhSach.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\DanhSach.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\DanhSach.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T06:39:37.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CamOn.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DatHang\\CamOn.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\DatHang\\CamOn.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DatHang\\CamOn.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\DatHang\\CamOn.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:01:58.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "DanhMucController.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Controllers\\DanhMucController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAIwF8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:07:40.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DanhSach.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\DanhSach.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\DanhSach.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\DanhSach.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\DanhSach.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:01:08.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TaoMoi.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\TaoMoi.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\TaoMoi.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\TaoMoi.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\TaoMoi.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:33:10.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DanhSach.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhSach.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhSach.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhSach.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhSach.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:31:57.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaiKhoanController.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\TaiKhoanController.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Controllers\\TaiKhoanController.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\TaiKhoanController.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Controllers\\TaiKhoanController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAA3wCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T06:43:35.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DanhMucDaAn.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhMucDaAn.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhMucDaAn.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhMucDaAn.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\DanhMucDaAn.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAACUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:31:56.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_FormDanhMuc.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\_FormDanhMuc.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\_FormDanhMuc.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\_FormDanhMuc.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DanhMuc\\_FormDanhMuc.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:31:50.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ChiTiet.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DonHang\\ChiTiet.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\DonHang\\ChiTiet.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DonHang\\ChiTiet.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\DonHang\\ChiTiet.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:27:34.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "InHoaDon.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DonHang\\InHoaDon.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\DonHang\\InHoaDon.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DonHang\\InHoaDon.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\DonHang\\InHoaDon.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:27:24.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Controllers\\DonHangController.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T07:08:45.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DangKy.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\TaiKhoan\\DangKy.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\TaiKhoan\\DangKy.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\TaiKhoan\\DangKy.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\TaiKhoan\\DangKy.cshtml",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAAAKgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T06:44:37.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ChiTiet.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\ChiTiet.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\ChiTiet.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\ChiTiet.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\DonHang\\ChiTiet.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:00:55.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DanhSach.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DonHang\\DanhSach.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\DonHang\\DanhSach.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DonHang\\DanhSach.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\DonHang\\DanhSach.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T07:09:37.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Logout.cshtml",
               "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Account\\Logout.cshtml",
               "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Account\\Logout.cshtml",
               "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Account\\Logout.cshtml",
               "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Account\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADMAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-29T11:40:04.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T07:12:21.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebsiteLaptop\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAmwJ8AAAARAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "DatHangController.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\DatHangController.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Controllers\\DatHangController.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\DatHangController.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Controllers\\DatHangController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:55:08.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T07:05:44.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 28,
+              "Title": "DatHang.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DatHang\\DatHang.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Views\\DatHang\\DatHang.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Views\\DatHang\\DatHang.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Views\\DatHang\\DatHang.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T18:24:19.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T07:01:59.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Account\\Logout.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\Logout.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Account\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T18:07:16.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HinhAnhLaptop.cs",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Models\\HinhAnhLaptop.cs",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Models\\HinhAnhLaptop.cs",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Models\\HinhAnhLaptop.cs",
-              "RelativeToolTip": "WebsiteLaptop\\Models\\HinhAnhLaptop.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T18:50:59.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Program.cs",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Program.cs",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Program.cs",
-              "RelativeToolTip": "WebsiteLaptop\\Program.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAowGMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T16:19:43.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentIndex": 29,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\User\\Controllers\\GioHangController.cs",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\User\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\User\\Controllers\\GioHangController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:38:26.097Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T06:44:21.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAB8AAABWAAAAAAAAAA==",
+              "DocumentIndex": 30,
+              "Title": "TaoMoi.cshtml",
+              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\TaoMoi.cshtml",
+              "RelativeDocumentMoniker": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\TaoMoi.cshtml",
+              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\TaoMoi.cshtml",
+              "RelativeToolTip": "WebsiteLaptop\\Areas\\Admin\\Views\\Laptop\\TaoMoi.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T16:55:02.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\AccessDenied.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Account\\AccessDenied.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\AccessDenied.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Account\\AccessDenied.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:46:07.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Laptop\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Laptop\\Index.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Laptop\\Index.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Laptop\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:42:12.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "WebsiteLaptop\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T16:29:12.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "WebsiteLaptop.csproj",
-              "DocumentMoniker": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\WebsiteLaptop.csproj",
-              "RelativeDocumentMoniker": "WebsiteLaptop\\WebsiteLaptop.csproj",
-              "ToolTip": "C:\\Lap_Trinh_Web_MVC\\WebsiteLaptop\\WebsiteLaptop\\WebsiteLaptop.csproj",
-              "RelativeToolTip": "WebsiteLaptop\\WebsiteLaptop.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-28T16:14:29.891Z"
+              "WhenOpened": "2025-06-01T06:40:21.957Z"
             }
           ]
         }

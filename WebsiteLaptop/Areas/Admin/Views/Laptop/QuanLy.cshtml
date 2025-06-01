@@ -12,46 +12,49 @@
     <a asp-action="Them" class="btn btn-success mb-3">Thêm Laptop mới</a>
     <a asp-action="SanPhamDaAn" class="btn btn-outline-secondary mb-3">Xem sản phẩm đã ẩn</a>
 
-
-    <table class="table table-bordered table-hover align-middle">
+    <table class="table table-bordered table-hover align-middle text-center">
         <thead class="table-dark">
             <tr>
-                <th>Số lượng sản phẩm</th>
+                <th style="width: 80px;">Số lượng</th>
                 <th>Ảnh</th>
-                <th>Tên Laptop</th>
-                <th>Hãng sản xuất</th>
+                <th class="text-start">Tên Laptop</th>
+                <th>Hãng</th>
                 <th>Giá</th>
-                <th>Danh mục</th>
+                <th style ="width: 100px;">Danh mục</th>
                 <th>Ngày tạo</th>
-                <th class="text-center">Thao tác</th>
+                <th style="width: 170px;">Thao tác</th>
             </tr>
         </thead>
         <tbody>
             @if (Model.Any())
             {
-                int i = 1;
                 foreach (var item in Model)
                 {
                     <tr>
-                        <td>@i</td>
                         <td>
-                            @{
-                                var anhDaiDien = item.HinhAnhLaptops.FirstOrDefault();
-                            }
-                            @if (anhDaiDien != null)
-                            {
-                                <img src="@anhDaiDien.DuongDan" style="width: 80px; height: 60px; object-fit: cover;" class="rounded border" />
-                            }
+                            <div class="d-flex justify-content-center align-items-center gap-2">
+                                <button class="btn btn-sm btn-outline-secondary" onclick="capNhatSoLuong(@item.MaLaptop, -1)">−</button>
+                                <span id="soLuong-@item.MaLaptop">@item.SoLuong</span>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="capNhatSoLuong(@item.MaLaptop, 1)">+</button>
+                            </div>
                         </td>
 
-                        <td>@item.TenLaptop</td>
+                        <td>
+                            @{
+                                var anh = item.HinhAnhLaptops.FirstOrDefault()?.DuongDan ?? "/images/no-image.png";
+                            }
+                            <img src="@anh" style="width: 80px; height: 60px; object-fit: cover;" class="rounded border" />
+                        </td>
+
+                        <td class="text-start">@item.TenLaptop</td>
                         <td>@item.HangSanXuat</td>
                         <td>@String.Format("{0:N0} ₫", item.Gia)</td>
                         <td>@item.DanhMuc?.TenDanhMuc</td>
                         <td>@item.NgayTao.ToString("dd/MM/yyyy")</td>
-                        <td class="text-center">
-                            <a asp-action="ChiTiet" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-info">Chi tiết</a>
-                            <a asp-action="ChinhSua" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-warning">Chỉnh sửa</a>
+
+                        <td>
+                            <a asp-action="ChiTiet" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-info mb-1">Chi tiết</a>
+                            <a asp-action="ChinhSua" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-warning mb-1">Sửa</a>
                             <a asp-action="AnSanPham" asp-route-id="@item.MaLaptop" class="btn btn-sm btn-danger" onclick="return confirm('Xoá sản phẩm này?');">Xóa</a>
                         </td>
                     </tr>
@@ -66,3 +69,32 @@
         </tbody>
     </table>
 </div>
+
+@section Scripts {
+    <script>
+        function capNhatSoLuong(id, delta) {
+            const el = document.getElementById("soLuong-" + id);
+            let current = parseInt(el.innerText);
+            let newVal = current + delta;
+
+            if (newVal < 1) return;
+
+            fetch("/Admin/Laptop/CapNhatSoLuongAjax", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ MaLaptop: id, SoLuong: newVal })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                el.innerText = data.soLuong;
+            } else {
+                alert("Lỗi: " + data.message);
+            }
+        });
+
+        }
+    </script>
+}

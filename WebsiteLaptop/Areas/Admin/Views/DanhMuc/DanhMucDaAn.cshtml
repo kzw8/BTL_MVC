@@ -18,7 +18,7 @@
                     <th style="width:40px;">
                         <input type="checkbox" id="check-all" />
                     </th>
-                    <th>#</th>
+                    <th>Số danh mục</th>
                     <th>Tên danh mục</th>
                     <th>Mô tả</th>
                     <th>Ngày xóa</th>
@@ -35,7 +35,7 @@
                             <td>
                                 <input type="checkbox" name="ids" value="@item.MaDanhMuc" class="item-check" />
                             </td>
-                            <td>@i++</td>
+                            <td>@i</td>
                             <td>@item.TenDanhMuc</td>
                             <td>@item.MoTa</td>
                             <td>@item.NgayXoa?.ToString("dd/MM/yyyy HH:mm")</td>

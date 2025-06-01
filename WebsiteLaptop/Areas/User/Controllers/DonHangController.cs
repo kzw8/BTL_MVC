@@ -51,6 +51,21 @@ namespace WebsiteLaptop.Areas.User.Controllers
 
             return View("ChiTiet", donHang); // View nằm tại /Areas/User/Views/DonHang/ChiTiet.cshtml
         }
+        [HttpGet]
+        public IActionResult InHoaDon(int id)
+        {
+            var userId = LayMaNguoiDung();
+
+            var donHang = _context.DonHang
+                .Include(d => d.DonHangChiTiets)
+                    .ThenInclude(ct => ct.Laptop)
+                .Include(d => d.NguoiDung)
+                .FirstOrDefault(d => d.MaDonHang == id && d.MaNguoiDung == userId);
+
+            if (donHang == null) return NotFound();
+
+            return View("InHoaDon", donHang); // View dành cho User
+        }
 
     }
 }

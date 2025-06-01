@@ -12,6 +12,7 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\WebsiteLaptop.
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Azure.Core.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Azure.Identity.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\FuzzySharp.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Humanizer.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\MailKit.dll
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -281,4 +282,3 @@ C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\refint\Website
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.pdb
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\WebsiteLaptop.genruntimeconfig.cache
 C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\obj\Debug\net8.0\ref\WebsiteLaptop.dll
-C:\Lap_Trinh_Web_MVC\WebsiteLaptop\WebsiteLaptop\bin\Debug\net8.0\FuzzySharp.dll

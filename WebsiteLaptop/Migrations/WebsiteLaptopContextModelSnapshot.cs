@@ -59,9 +59,15 @@ namespace WebsiteLaptop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaDanhMuc"));
 
+                    b.Property<bool>("DaXoa")
+                        .HasColumnType("bit");
+
                     b.Property<string>("MoTa")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("NgayXoa")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("TenDanhMuc")
                         .IsRequired()
@@ -169,6 +175,9 @@ namespace WebsiteLaptop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLaptop"));
 
+                    b.Property<bool>("DaXoa")
+                        .HasColumnType("bit");
+
                     b.Property<string>("DuongDanAnh")
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
@@ -189,6 +198,12 @@ namespace WebsiteLaptop.Migrations
 
                     b.Property<DateTime>("NgayTao")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("NgayXoa")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
 
                     b.Property<string>("TenDangNhap")
                         .IsRequired()
@@ -260,62 +275,48 @@ namespace WebsiteLaptop.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaThongSo"));
 
                     b.Property<string>("Audio")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Bluetooth")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CPU")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CardDoHoa")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CongGiaoTiep")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HeDieuHanh")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LAN")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MaLaptop")
                         .HasColumnType("int");
 
                     b.Property<string>("ManHinh")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OCung")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Pin")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RAM")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TrongLuong")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("WIFI")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Webcam")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaThongSo");

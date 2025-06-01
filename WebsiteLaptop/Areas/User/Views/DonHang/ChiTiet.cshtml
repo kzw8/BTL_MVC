@@ -21,7 +21,7 @@
     <table class="table table-bordered">
         <thead class="table-dark">
             <tr>
-                <th>#</th>
+                <th>Số đơn</th>
                 <th>Laptop</th>
                 <th>Đơn giá</th>
                 <th>Số lượng</th>
@@ -35,7 +35,7 @@
                 foreach (var item in Model.DonHangChiTiets)
                 {
                     <tr>
-                        <td>@i++</td>
+                        <td>@i</td>
                         <td>@item.Laptop?.TenLaptop</td>
                         <td>@String.Format("{0:N0} ₫", item.DonGia)</td>
                         <td>@item.SoLuong</td>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="mt-4">
-        <a asp-action="DanhSach" class="btn btn-secondary">⬅️ Quay lại danh sách</a>
-        <a asp-action="InHoaDon" asp-route-id="@Model.MaDonHang" class="btn btn-outline-primary" target="_blank">🖨️ In hóa đơn</a>
+        <a asp-action="DanhSach" class="btn btn-secondary">Quay lại danh sách</a>
+        <a asp-action="InHoaDon" asp-route-id="@Model.MaDonHang" class="btn btn-outline-primary" target="_blank">In hóa đơn</a>
     </div>
 </div>

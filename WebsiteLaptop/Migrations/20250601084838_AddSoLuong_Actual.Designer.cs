@@ -12,8 +12,8 @@ using WebsiteLaptop.Data;
 namespace WebsiteLaptop.Migrations
 {
     [DbContext(typeof(WebsiteLaptopContext))]
-    [Migration("20250529060313_AddHinhAnhLaptop")]
-    partial class AddHinhAnhLaptop
+    [Migration("20250601084838_AddSoLuong_Actual")]
+    partial class AddSoLuong_Actual
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,9 +62,15 @@ namespace WebsiteLaptop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaDanhMuc"));
 
+                    b.Property<bool>("DaXoa")
+                        .HasColumnType("bit");
+
                     b.Property<string>("MoTa")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("NgayXoa")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("TenDanhMuc")
                         .IsRequired()
@@ -172,6 +178,9 @@ namespace WebsiteLaptop.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLaptop"));
 
+                    b.Property<bool>("DaXoa")
+                        .HasColumnType("bit");
+
                     b.Property<string>("DuongDanAnh")
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
@@ -192,6 +201,12 @@ namespace WebsiteLaptop.Migrations
 
                     b.Property<DateTime>("NgayTao")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("NgayXoa")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
 
                     b.Property<string>("TenDangNhap")
                         .IsRequired()
@@ -252,6 +267,67 @@ namespace WebsiteLaptop.Migrations
                     b.HasKey("MaNguoiDung");
 
                     b.ToTable("NguoiDung");
+                });
+
+            modelBuilder.Entity("WebsiteLaptop.Models.ThongSoKyThuat", b =>
+                {
+                    b.Property<int>("MaThongSo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaThongSo"));
+
+                    b.Property<string>("Audio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Bluetooth")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CPU")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardDoHoa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CongGiaoTiep")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HeDieuHanh")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LAN")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaLaptop")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ManHinh")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OCung")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RAM")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrongLuong")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WIFI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Webcam")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MaThongSo");
+
+                    b.HasIndex("MaLaptop")
+                        .IsUnique();
+
+                    b.ToTable("ThongSoKyThuat");
                 });
 
             modelBuilder.Entity("WebsiteLaptop.Models.ChiTietGioHang", b =>
@@ -325,6 +401,17 @@ namespace WebsiteLaptop.Migrations
                     b.Navigation("DanhMuc");
                 });
 
+            modelBuilder.Entity("WebsiteLaptop.Models.ThongSoKyThuat", b =>
+                {
+                    b.HasOne("WebsiteLaptop.Models.Laptop", "Laptop")
+                        .WithOne("ThongSoKyThuat")
+                        .HasForeignKey("WebsiteLaptop.Models.ThongSoKyThuat", "MaLaptop")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Laptop");
+                });
+
             modelBuilder.Entity("WebsiteLaptop.Models.DanhMuc", b =>
                 {
                     b.Navigation("Laptops");
@@ -342,6 +429,8 @@ namespace WebsiteLaptop.Migrations
                     b.Navigation("DonHangChiTiets");
 
                     b.Navigation("HinhAnhLaptops");
+
+                    b.Navigation("ThongSoKyThuat");
                 });
 
             modelBuilder.Entity("WebsiteLaptop.Models.NguoiDung", b =>
